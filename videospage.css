@@ -1,0 +1,21 @@
+.container{
+    grid-template-rows:20% 40% 60% 80% 20%;
+
+}
+@media screen and (max-width:600px) {
+    .fotr{
+        grid-template-rows:20% 40% 1000% 100% 20%;
+        margin-top: 253vh;
+        height: 20vh;
+    }
+    .main{
+        background:none;
+    }
+}
+@media screen and (min-width:600px){
+       .fotr{
+       grid-template-rows:20% 40% 1000% 100% 20%;
+        margin-top:-2vh;
+        height: 20vh;
+    }
+}

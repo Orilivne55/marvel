@@ -1,3 +1,100 @@
 body{
     margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    
 }
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:10% 40% 40% 10%;
+    grid-template-rows:20% 20% 20% 20% 20%;
+    grid-template-areas:
+    "headr headr headr headr"
+    "main main main main"
+    "main main main main"
+    "main  main main main"
+    "fotr fotr fotr fotr"
+    ;
+}
+.headr{
+    grid-area:headr ;
+    background-color:aquamarine;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+#marvelpic{
+    margin-left: 50vw;
+    position: absolute;
+    height: 16vh;
+    width: 10vw;
+    margin-top:4vh ;
+    align-items: center;
+}
+.main{
+    grid-area: main ;
+    background-color: blueiolet;
+    top : 0;
+   background-image: url(.//img/homePageBackground.jpg);
+    background-size:86vh;   
+}
+h1{
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    
+}
+.fotr{
+    grid-area:fotr ;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container2 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width:600px) {
+    .fotr{
+      margin-top: -20vh;
+    }
+    
+  }
+  @media screen and (min-width:600px) {
+    .fotr{
+      margin-top: -20vh;
+    }
+    
+  }

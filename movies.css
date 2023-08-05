@@ -1,0 +1,45 @@
+.container{
+    grid-template-rows:20% 40% 60% 80% 20%;
+    color: white;
+}
+.photoOrder{
+    height: 80vh;
+    width: 100vw;
+}
+@media screen and (max-width:600px) {
+    .fotr{
+        grid-template-rows:20% 40% 1000% 100% 20%;
+        margin-top: 213vh;;
+        height: 20vh;
+    }
+}
+@media screen and (max-width:600px) {
+    .photoOrder{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:600px){
+       .fotr{
+       grid-template-rows:20% 40% 1000% 100% 20%;
+        margin-top:100vh;
+        height: 20vh;
+    }
+}
+.photosize{
+    width: 20vh;
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (min-width:600px){
+    .main{
+        color: rgb(4, 255, 117);
+        font-size: 20px;
+        font-style: bold;
+    }
+}
+.main{
+    background-image: url(.//img/contactPageBackground.jpg);
+    background-size: 20vh;
+}

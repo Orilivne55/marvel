@@ -1,0 +1,10 @@
+@media screen and (max-width:600px){
+    .videoOrder{
+        display: flex;
+        flex-direction: column;
+    }
+    .main{
+        background:none;
+        color: black;
+    }
+}

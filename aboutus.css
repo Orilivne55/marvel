@@ -1,0 +1,29 @@
+main{
+    background-image: url(.//img/contactPageBackground.jpg); 
+}
+.container{
+    grid-template-rows:20% 80% 60% 80% 20%;
+}
+.fotr{
+    margin-top:0vh;
+}
+#MarvelStory{
+    font-size: 40px;
+    color: rgb(4, 255, 117);
+  }
+  #ourStory{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+   font-style: italic;
+    color: rgb(4, 255, 117);
+  }
+  @media screen and (max-width:940px)  {
+    .main{
+        background: none;
+    }
+    .fotr{
+        height: 20vh;
+        margin-top: 290vh;
+    }
+  }
