@@ -1,11 +1,121 @@
-.container{
-    grid-template-rows:20% 40% 60% 80% 20%;
-
+body{
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
 }
+*{
+    font-family: 'Josefin Sans', sans-serif;
+     font-family: 'Noto Sans', sans-serif;
+     box-sizing: border-box;
+ }   
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:20% 40% 40% 10%;
+    grid-template-rows:20% 40% 60% 80% 20%;
+    grid-template-areas:
+    "nav nav headr headr"
+    "main main main main"
+    "main main main main"
+    "main  main main main"
+    "fotr fotr fotr fotr"
+    ;
+}
+.nav{
+    grid-area: nav;
+    height:100%;
+    width: 100%;
+    background-color: #4d4d4d;
+    position: relative;
+  
+  }
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      z-index: 99;
+      overflow-y: auto;
+    }
+  }
 @media screen and (max-width:600px) {
     .fotr{
         grid-template-rows:20% 40% 1000% 100% 20%;
-        margin-top: 253vh;
+        margin-top: 0vh;
         height: 20vh;
     }
     .main{
@@ -23,3 +133,33 @@
     background-image: url(.//img/contactPageBackground.jpg);
     grid-area: main ;
 }
+.headr{
+    grid-area:headr ;
+    background-color:aquamarine;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+#marvelpic{
+    position: absolute;
+    height: 20vh;
+    width: 40vw;
+    margin-top:0vh ;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    animation-name: marvelpic;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    z-index: 2;
+}
+@keyframes marvelpic{
+  50%{transform: rotate(180deg);}
+}
+.fotr{
+    grid-area:fotr ;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }

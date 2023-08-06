@@ -7,13 +7,12 @@ body{
    font-family: 'Josefin Sans', sans-serif;
     font-family: 'Noto Sans', sans-serif;
     box-sizing: border-box;
-
 }   
 .container{
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns:10% 40% 40% 10%;
+    grid-template-columns:20% 40% 40% 10%;
     grid-template-rows:20% 20% 20% 20% 20%;
     grid-template-areas:
     "nav nav headr headr"
@@ -67,7 +66,7 @@ body{
   display: none;
 }
 
-@media (max-width:600px) {
+@media (max-width:1150px) {
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -122,13 +121,21 @@ body{
 }
 #marvelpic{
     position: absolute;
-    height: 16vh;
-    width: 10vw;
-    margin-top:4vh ;
+    height: 20vh;
+    width: 40vw;
+    margin-top:0vh ;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-
+    animation-name: marvelpic;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    z-index: 2;
 }
+@keyframes marvelpic{
+  50%{transform: rotate(180deg);}
+}
+
 .main{
     grid-area: main ;
     top : 0;

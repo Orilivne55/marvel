@@ -1,10 +1,177 @@
 .container2{ 
-    background-image:url(.//img/contactPageBackground.jpg) ;
-    color: white;
+      color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    margin-top: 30vh;
+    margin-left: 25vw;
+}
+*{
+  font-family: 'Josefin Sans', sans-serif;
+   font-family: 'Noto Sans', sans-serif;
+   box-sizing: border-box;
+}   
+body{
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.main{
+  grid-area: main ;
+  top : 0;
+      background-image:url(.//img/contactPageBackground.jpg) ;
+}
+#marvelpic{
+  position: absolute;
+  height: 20vh;
+  width: 40vw;
+  margin-top:0vh ;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  animation-name: marvelpic;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  z-index: 2;
+}
+@keyframes marvelpic{
+50%{transform: rotate(180deg);}
+}
+.container{ 
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns:20% 40% 40% 10%;
+  grid-template-rows:20% 80% 60% 80% 20%;
+  grid-template-areas:
+  "nav nav headr headr"
+  "main main main main"
+  "main main main main"
+  "fotr fotr fotr fotr"
+  ;
+}
+.headr{
+  grid-area:headr ;
+  background-color:aquamarine;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 .fotr{
-    margin-top: 0vh;
+    grid-area:fotr ;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+   margin-top: 130vh;
 }
+.nav{
+    grid-area: nav;
+    height:100%;
+    width: 100%;
+    background-color: #4d4d4d;
+    position: relative;
+  
+  }
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:1150px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      z-index: 99;
+      overflow-y: auto;
+    }
+  }
+  #ourStory{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+   font-style: italic;
+    color: rgb(0, 0, 0);
+
+  }
+  @media screen and (max-width:940px)  {
+    .fotr{
+        height: 20vh;
+        margin-top: 110vh;
+    }
+  }
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -14,6 +181,7 @@ input[type=text], select, textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+    
   }
   
   input[type=submit] {
@@ -31,7 +199,6 @@ input[type=text], select, textarea {
   
   .container2 {
     border-radius: 5px;
-    background-color: #f2f2f2;
     padding: 20px;
     display: flex;
     justify-content: center;
