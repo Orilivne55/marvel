@@ -19,3 +19,7 @@
         height: 20vh;
     }
 }
+.main{
+    background-image: url(.//img/contactPageBackground.jpg);
+    grid-area: main ;
+}

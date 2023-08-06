@@ -1,22 +1,53 @@
-main{
-    background-image: url(.//img/contactPageBackground.jpg); 
+body{
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
 }
-.container{
+*{
+   font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+
+}   
+.container{ 
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:10% 40% 40% 10%;
     grid-template-rows:20% 80% 60% 80% 20%;
+    grid-template-areas:
+    "navbar navbar headr headr"
+    "main main main main"
+    "main main main main"
+    "main  main main main"
+    "fotr fotr fotr fotr"
+    ;
+}
+#marvelpic{
+    position: absolute;
+    height: 16vh;
+    width: 10vw;
+    margin-top:4vh ;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
 }
 .fotr{
     margin-top:0vh;
+    grid-area:fotr ;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
 }
-#MarvelStory{
-    font-size: 40px;
-    color: rgb(4, 255, 117);
-  }
+
   #ourStory{
     display: flex;
     justify-content: center;
-    font-size: 50px;
+    font-size: 30px;
    font-style: italic;
-    color: rgb(4, 255, 117);
+    color: rgb(0, 0, 0);
+
   }
   @media screen and (max-width:940px)  {
     .main{
@@ -27,3 +58,37 @@ main{
         margin-top: 290vh;
     }
   }
+  .main{
+    grid-area: main ;
+    top : 0;
+    overflow-y:auto;
+    height: auto;
+    width: auto;
+}
+.headr{
+    grid-area:headr ;
+    background-color:aquamarine;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.backgroundimg{
+    background-image: url(.//img/homePageBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    height: 60%; 
+}
+h2{
+  text-align: center;
+  position: absolute;
+  left : 10%;
+  top:16%;
+  width: 60%;
+  background-color: rgba(256 , 256,256,0.5);
+  font-size: 30px;
+   z-index: 2;
+   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}

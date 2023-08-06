@@ -2,6 +2,24 @@
     grid-template-rows:20% 40% 60% 80% 20%;
     color: white;
 }
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:10% 40% 40% 10%;
+    grid-template-rows:20% 40% 60% 80% 20%;
+   grid-template-areas:
+    "navbar navbar headr headr"
+    "main main main main"
+    "main main main main"
+    "main  main main main"
+    "fotr fotr fotr fotr"
+    ;
+}
+.navbar{
+    grid-area: navbar;
+  
+  }
 .photoOrder{
     height: 80vh;
     width: 100vw;
@@ -41,5 +59,28 @@
 }
 .main{
     background-image: url(.//img/contactPageBackground.jpg);
-    background-size: 20vh;
+    grid-area: main ;
+}
+    #marvelpic{
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        position: absolute;
+        height: 16vh;
+        width: 10vw;
+        margin-top:4vh ;
+        align-items: center;
+    }
+
+.fotr{
+    grid-area:fotr ;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  .headr{
+    grid-area:headr ;
+    background-color:aquamarine;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
