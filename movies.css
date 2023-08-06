@@ -59,7 +59,7 @@ body{
 }
 @media screen and (min-width:600px){
     .main{
-        color: rgb(4, 255, 117);
+        color: #fff;
         font-size: 20px;
         font-style: bold;
     }
@@ -176,14 +176,14 @@ body{
 }
 .fotr{
     grid-area:fotr ;
-    background-color: aquamarine;
+    background-color: #4d4d4d;
     display: flex;
     justify-content: center;
     width: 100vw;
   }
   .headr{
     grid-area:headr ;
-    background-color:aquamarine;
+    background-color:#4d4d4d;
     overflow: hidden;
     display: flex;
     justify-content: space-between;

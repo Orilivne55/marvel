@@ -114,7 +114,7 @@ body{
 }
 .headr{
     grid-area:headr ;
-    background-color:aquamarine;
+    background-color:#4d4d4d;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -142,11 +142,10 @@ body{
     
 }
 .backgroundimg{
-    background-image: url(.//img/homePageBackground.jpg);
+    background-image: url(.//img/homePageBackground2\.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(2px);
     height: 100%; 
 }
 p{
@@ -163,7 +162,7 @@ p{
 }
 .fotr{
     grid-area:fotr ;
-    background-color: aquamarine;
+    background-color: #4d4d4d;
     display: flex;
     justify-content: center;
     width: 100vw;

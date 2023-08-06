@@ -55,14 +55,14 @@ body{
 }
 .headr{
   grid-area:headr ;
-  background-color:aquamarine;
+  background-color:#4d4d4d;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
 }
 .fotr{
     grid-area:fotr ;
-    background-color: aquamarine;
+    background-color: #4d4d4d;
     display: flex;
     justify-content: center;
     width: 100vw;
